@@ -6,10 +6,10 @@ import com.twilio.type.PhoneNumber;
 import com.twilio.exception.ApiException;
 
 public class SmsService {
-    private static final String ACCOUNT_SID = System.getenv("TWILIO_SID");
-    private static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN");
-    private static final String TWILIO_NUMBER = System.getenv("TWILIO_NUMBER");
-static {
+    private static final String ACCOUNT_SID   = "AC3a2077b1fae1532aec6f15b5a245c026";
+    private static final String AUTH_TOKEN    = "c4214250e82faaccd9fc29987de44ae9";
+    private static final String TWILIO_NUMBER = "+19787986076";
+    static {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
     }
 
