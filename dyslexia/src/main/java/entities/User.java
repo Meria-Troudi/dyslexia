@@ -1,5 +1,4 @@
 package entities;
-import java.sql.Timestamp;
 import java.util.Date;
 
 public class User {
@@ -11,14 +10,18 @@ public class User {
     protected String gender;
     protected String profileImage;
     protected String email;
+    protected int phoneNumber;
     protected String password;
     protected Date dateCreation;
-    protected String authCode;
+    protected boolean isBanned;
+    private boolean enabled; // 🔥 ajouté ici
+    private String resetToken;
+
 
     public User() {}
 
     public User(int idUser, Roles role, String firstName, String lastName,
-                Date birthDay, String gender, String profileImage, String email, String password, Date dateCreation, String authCode) {
+                Date birthDay, String gender, String profileImage, String email,int phoneNumber, String password, Date dateCreation, boolean isBanned) {
         this.idUser = idUser;
         this.role = role;
         this.firstName = firstName;
@@ -27,11 +30,12 @@ public class User {
         this.gender = gender;
         this.profileImage = profileImage;
         this.email = email;
+        this.phoneNumber = phoneNumber;
         this.password = password;
         this.dateCreation = dateCreation;
-        this.authCode = authCode;
-    }
+        this.isBanned = isBanned;
 
+    }
     @Override
     public String toString() {
         return "ID: " + idUser +
@@ -97,18 +101,31 @@ public class User {
     public void setDateCreation(Date dateCreation) {
         this.dateCreation = dateCreation;
     }
-    public String getAuthCode() {
-        return authCode;
+
+    public int getPhoneNumber() {return phoneNumber;}
+    public void setPhoneNumber(int phoneNumber) {this.phoneNumber = phoneNumber;}
+    public boolean isBanned() {
+        return isBanned;
     }
-    public void setAuthCode(String authCode) {
-        this.authCode = authCode;
+
+    public void setBanned(boolean banned) {
+        isBanned = banned;
     }
 
+    public boolean isEnabled() {
+        return enabled;
+    }
 
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
 
+    public String getResetToken() {
+        return resetToken;
+    }
 
-
-
-
+    public void setResetToken(String resetToken) {
+        this.resetToken = resetToken;
+    }
 
 }

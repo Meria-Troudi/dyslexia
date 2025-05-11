@@ -1,0 +1,188 @@
+
+/* Right Pane (Welcome Back) */
+#formContainer {
+    -fx-background-color: #ffffff;
+        -fx-spacing: 0;
+        -fx-padding: 0;
+
+}
+/* Left Pane (Form Area) */
+.leftPane {
+    -fx-background-color: linear-gradient(to bottom, #04103B, #13305a, #04103B);
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(1,41,112,0.1), 30, 0, 0, 0);
+
+
+}
+/* Title in the Forms */
+.form-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0b2e59;
+}
+.VBox-Signin{
+    -fx-background-color: white;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-spacing: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 5);
+}
+/* Form Containers  style="-fx-background-color: #f6f9ff; -fx-border-radius: 5px; -fx-effect: dropshadow(three-pass-box, rgba(1,41,112,0.1), 30, 0, 0, 0);"*/
+
+.VBox-signup {
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-border-radius: 5px;
+
+}
+/* Labels inside Forms */
+VBox Label {
+    -fx-font-family:"Century Gothic";
+    -fx-font-size: 12px;
+    -fx-text-fill: #0b2e59;
+}
+
+/* TextFields and PasswordFields */
+TextField, PasswordField, DatePicker {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 12px;
+    -fx-min-height:34px;
+    -fx-min-width:130px;
+}
+
+/* Buttons */
+Button {
+    -fx-background-color: #E53935;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 20px;
+    -fx-font-size: 17px;
+    -fx-cursor: hand;
+}
+
+/* Flat button (Connexion, S'inscrire) */
+.flat-button {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 17px;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Hyperlink */
+Hyperlink {
+    -fx-text-fill: #E53935;
+    -fx-underline: false;
+
+}
+
+Hyperlink:hover {
+    -fx-underline: true;
+}
+
+/* Checkbox and Radiobutton */
+CheckBox, RadioButton {
+    -fx-text-fill: #0b2e59;
+}
+
+/* Welcome text inside Left Pane */
+#leftPane Label {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+#signInPane, #signUpPane {
+    -fx-background-color: #f6f9ff;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(1,41,112,0.1), 30, 0, 0, 0);
+}
+
+
+.back-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #E53935;
+    -fx-font-size: 16px;
+    -fx-alignment: CENTER_LEFT;
+}
+.back-button:hover {
+    -fx-text-fill: #222;
+}
+
+/*changepwd */
+.field-changepwd{
+    -fx-min-height: 30px;
+    -fx-min-width: 200px;
+}
+.btn-settings{
+    -fx-background-color: #f6f9ff;
+    -fx-text-fill: black;
+    -fx-background-radius: 1px;
+    -fx-border-radius: 5px;
+    -fx-border-color: #aab4ff;
+    -fx-padding: 8px 20px;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+.card {
+    -fx-background-color: #f6f9ff;
+    -fx-border-color: #aab4ff;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.07), 10, 0.3, 2, 2);
+}
+.primary-button {
+    -fx-background-color: #aab4ff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 4px;
+    -fx-cursor: hand;
+}
+.text-field,
+.password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-prompt-text-fill: #888888;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 2, 0.0, 0, 1);
+    -fx-transition: all 0.3s ease;
+
+}
+/* Focus effect: stronger border to highlight active input */
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: #4285f4;
+    -fx-effect: dropshadow(gaussian, rgba(66, 133, 244, 0.4), 6, 0.0, 0, 2);
+    -fx-prompt-text-fill: transparent;
+}
+
+/* ComboBox styling */
+ComboBox {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 5px;
+    -fx-padding: 4px;
+}
+
+ComboBox .arrow-button {
+    -fx-background-color: #f6f9ff;
+}

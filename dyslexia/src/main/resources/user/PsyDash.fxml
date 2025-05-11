@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="680" prefWidth="1200"
+            stylesheets="@../CSS/dash.css"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.PsyProfileController">
+
+   <!-- Sidebar on the left -->
+   <fx:include source="../sideBar.fxml"
+               AnchorPane.topAnchor="0"
+               AnchorPane.leftAnchor="0"
+               AnchorPane.bottomAnchor="0"/>
+
+   <!-- Main content area -->
+   <AnchorPane fx:id="content" styleClass="content"
+               AnchorPane.topAnchor="0"
+               AnchorPane.leftAnchor="200"
+               AnchorPane.rightAnchor="0"
+               AnchorPane.bottomAnchor="0">
+
+      <VBox spacing="20"
+            AnchorPane.topAnchor="60"
+            AnchorPane.leftAnchor="20"
+            AnchorPane.rightAnchor="20"
+            AnchorPane.bottomAnchor="20">
+
+         <!-- === Card 1: Basic Info === -->
+         <HBox spacing="20" styleClass="card">
+            <ImageView fx:id="ivProfile"
+                       fitWidth="120" fitHeight="120"
+                       preserveRatio="true"
+                       styleClass="profile-image"/>
+            <VBox spacing="5" alignment="CENTER_LEFT">
+               <Label fx:id="lblName"
+                      styleClass="title-label"
+                      text="Dr. Jane Doe"/>
+               <Label fx:id="lblEmail"
+                      styleClass="subtitle-label"
+                      text="jane.doe@example.com"/>
+            </VBox>
+         </HBox>
+
+         <!-- === Card 2: Biography & Action === -->
+         <VBox spacing="15" styleClass="card">
+            <Label text="Biography" styleClass="section-heading"/>
+            <Text fx:id="txtBio" wrappingWidth="740" styleClass="body-text"/>
+            <Button fx:id="btnConsult" text="Start Consultation" styleClass="button-primary"/>
+         </VBox>
+
+         <!-- === Card 3: Full Info === -->
+         <VBox spacing="10" styleClass="card">
+            <Label text="Full Profile Information" styleClass="section-heading"/>
+            <GridPane hgap="20" vgap="10">
+               <Label text="First Name:"/><Label fx:id="txtName"/>
+               <Label text="Last Name:" GridPane.rowIndex="1"/><Label fx:id="txtLast" GridPane.rowIndex="1"/>
+               <Label text="Email:" GridPane.rowIndex="2"/><Label fx:id="txtEmail" GridPane.rowIndex="2"/>
+               <Label text="Phone:" GridPane.rowIndex="3"/><Label fx:id="txtPhone" GridPane.rowIndex="3"/>
+               <Label text="Birth Date:" GridPane.rowIndex="4"/><Label fx:id="txtBd" GridPane.rowIndex="4"/>
+               <Label text="Schedule:" GridPane.rowIndex="5"/><Label fx:id="txtSchedule" GridPane.rowIndex="5"/>
+            </GridPane>
+         </VBox>
+      </VBox>
+   </AnchorPane>
+</AnchorPane>

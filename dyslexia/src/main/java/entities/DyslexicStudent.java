@@ -14,9 +14,9 @@ public class DyslexicStudent extends User {
 
     }
 
-    public DyslexicStudent(int idUser, Roles role, String firstName, String lastName, Date birthDay, String gender, String profileImage, String email, String password, Date dateCreation, String authCode,
-                           DyslexiaType dyslexiaType, SeverityLevel severityLevel, String specificNeeds, String globalProgress, Integer parentId) {
-        super(idUser, role, firstName, lastName, birthDay, gender, profileImage, email, password, dateCreation, authCode);
+    public DyslexicStudent(int idUser, Roles role, String firstName, String lastName, Date birthDay, String gender, String profileImage, String email,int phoneNumber,String password, Date dateCreation, boolean isbanned,
+                           DyslexiaType dyslexiaType, SeverityLevel severityLevel, String specificNeeds, String globalProgress) {
+        super(idUser, role, firstName, lastName, birthDay, gender, profileImage, email,phoneNumber, password, dateCreation, isbanned);
         this.dyslexiaType = dyslexiaType;
         this.severityLevel = severityLevel;
         this.specificNeeds = specificNeeds;

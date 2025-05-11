@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1200.0" stylesheets="@../CSS/dash.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StDashController">
+   <fx:include fx:id="sidebar" source="../sideBar.fxml" />
+   <AnchorPane>
+      <!-- content-->
+   </AnchorPane>
+   <Pane fx:id="pane_welcome" layoutX="188.0" layoutY="102.0" prefHeight="138.0" prefWidth="652.0" styleClass="pane_welcome">
+      <children>
+         <Label layoutX="20.0" layoutY="10.0" style="-fx-font-size: 24px; -fx-text-fill: white;" text="Welcome back" textFill="#756f6f" />
+         <Label layoutX="20.0" layoutY="87.0" prefHeight="17.0" prefWidth="250.0" style="-fx-text-fill: white;" text="Stay informed through your personal portal dashboard." textFill="#4d4646" />
+         <ImageView fx:id="bannerImage" fitHeight="208.0" fitWidth="423.0" layoutX="162.0" layoutY="-70.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-chercher-10110.png" />
+            </image>
+         </ImageView>
+         <Label fx:id="nameuser" layoutX="20.0" layoutY="45.0" prefHeight="35.0" prefWidth="187.0" style="-fx-font-size: 24px; -fx-text-fill: white;" textFill="#756f6f" />
+      </children>
+   </Pane>
+   <!-- Student Info -->
+   <Pane fx:id="studentInfoPane" layoutX="870.0" layoutY="102.0" prefHeight="138.0" prefWidth="292.0" styleClass="pane_info">
+      <children>
+         <Label layoutX="23.0" layoutY="9.0" text="Student Info">
+            <font><Font size="20.0"/></font>
+         </Label>
+         <Line layoutX="67.0" layoutY="39.0" startX="-64.0" endX="193.0" strokeWidth="0.5"/>
+         <Label layoutX="20.0" layoutY="52.0" text="DyslexiaType"/>
+         <Label fx:id="DyslexiaTypecFields" layoutX="99.0" layoutY="52.0"/>
+         <Label layoutX="20.0" layoutY="84.0" text="SeverityLevel"/>
+         <Label fx:id="SeverityLevelFields" layoutX="96.0" layoutY="84.0"/>
+         <Label layoutX="20.0" layoutY="113.0" text="SpecificNeeds"/>
+         <Label fx:id="specificNeedsFields" layoutX="99.0" layoutY="113.0"/>
+      </children>
+   </Pane>
+
+   <!-- Teacher Info (initially hidden) -->
+   <Pane fx:id="teacherInfoPane" layoutX="870.0" layoutY="102.0" prefHeight="138.0" prefWidth="292.0" visible="false" styleClass="pane_info">
+      <children>
+         <Label layoutX="23.0" layoutY="9.0" text="Teacher Info">
+            <font><Font size="20.0"/></font>
+         </Label>
+         <Line layoutX="67.0" layoutY="39.0" startX="-64.0" endX="193.0" strokeWidth="0.5"/>
+         <Label layoutX="20.0" layoutY="52.0" text="Subject Area"/>
+         <Label fx:id="subjectAreaLabel" layoutX="120.0" layoutY="52.0"/>
+         <Label layoutX="20.0" layoutY="84.0" text="Availability"/>
+         <Label fx:id="availabilityLabel" layoutX="120.0" layoutY="84.0"/>
+      </children>
+   </Pane>
+   <Label layoutX="231.0" layoutY="265.0" prefHeight="33.0" prefWidth="73.0" text="courses">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Pane fx:id="pane_1" layoutX="188.0" layoutY="309.0" prefHeight="138.0" prefWidth="200.0" styleClass="pane_1">
+      <children>
+         <Label layoutX="13.0" layoutY="7.0" prefHeight="33.0" prefWidth="73.0" text="course">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <Label layoutX="35.0" layoutY="47.0" text="subject" />
+         <Line endX="100.0" layoutX="77.0" layoutY="40.0" startX="-64.0" strokeMiterLimit="6.0" strokeWidth="0.5" />
+         <Label layoutX="32.0" layoutY="71.0" text="teacher" />
+         <Label layoutX="32.0" layoutY="98.0" text="difficulty level " />
+         <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="3.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-personne-homme-24.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="3.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-heure-de-livraison-24.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="3.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-livre-de-philosophie-32.png" />
+            </image>
+         </ImageView>
+      </children>
+   </Pane>
+   <Line endX="577.0" endY="-2.0" layoutX="232.0" layoutY="299.0" startX="-33.0" startY="-1.0" strokeMiterLimit="6.0" strokeWidth="0.5" />
+   <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="199.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../images/icons8-partage-de-connaissances-48.png" />
+      </image>
+   </ImageView>
+   <Hyperlink fx:id="viewcour" layoutX="716.0" layoutY="270.0" prefHeight="26.0" prefWidth="94.0" text="view more &gt;">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Hyperlink>
+   <Pane fx:id="pane_11" layoutX="404.0" layoutY="309.0" prefHeight="138.0" prefWidth="200.0" styleClass="pane_11">
+      <children>
+         <Label layoutX="13.0" layoutY="7.0" prefHeight="33.0" prefWidth="73.0" text="course">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <Label layoutX="35.0" layoutY="47.0" text="subject" />
+         <Line endX="100.0" layoutX="77.0" layoutY="40.0" startX="-64.0" strokeMiterLimit="6.0" strokeWidth="0.5" />
+         <Label layoutX="32.0" layoutY="71.0" text="teacher" />
+         <Label layoutX="32.0" layoutY="98.0" text="difficulty level " />
+         <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="3.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-personne-homme-24.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="3.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-heure-de-livraison-24.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="3.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-livre-de-philosophie-32.png" />
+            </image>
+         </ImageView>
+      </children>
+   </Pane>
+   <Pane fx:id="pane_111" layoutX="616.0" layoutY="309.0" prefHeight="138.0" prefWidth="200.0" styleClass="pane_111">
+      <children>
+         <Label layoutX="13.0" layoutY="7.0" prefHeight="33.0" prefWidth="73.0" text="course">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Label>
+         <Label layoutX="35.0" layoutY="47.0" text="subject" />
+         <Line endX="100.0" layoutX="77.0" layoutY="40.0" startX="-64.0" strokeMiterLimit="6.0" strokeWidth="0.5" />
+         <Label layoutX="32.0" layoutY="71.0" text="teacher" />
+         <Label layoutX="32.0" layoutY="98.0" text="difficulty level " />
+         <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="3.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-personne-homme-24.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="3.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-heure-de-livraison-24.png" />
+            </image>
+         </ImageView>
+         <ImageView fitHeight="19.0" fitWidth="19.0" layoutX="3.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../images/icons8-livre-de-philosophie-32.png" />
+            </image>
+         </ImageView>
+      </children>
+   </Pane>
+   <!-- Quizzes Section -->
+   <Label layoutX="863.0" layoutY="266.0" prefHeight="33.0" prefWidth="73.0" text="Quizzes">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <ScrollPane layoutX="859.0" layoutY="306.0" prefHeight="132.0" prefWidth="328.0">
+      <content>
+         <VBox fx:id="quizListVBox" prefHeight="120.0" prefWidth="310.0" spacing="20.0">
+            <!-- Single Quiz Card Template -->
+            <Pane fx:id="quiz1" prefHeight="39.0" prefWidth="322.0" styleClass="pane_1">
+               <children>
+                  <Label layoutX="16.0" layoutY="4.0" prefHeight="15.0" prefWidth="68.0" text="Quiz 1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="84.0" layoutY="9.0" text="Difficulty: Medium" />
+                  <!-- Progress Indicator -->
+                  <ProgressIndicator fx:id="progressIndicatorQuiz1" layoutX="269.0" prefHeight="42.0" prefWidth="39.0" progress="0.5" />
+               </children>
+            </Pane>
+         </VBox>
+      </content>
+   </ScrollPane>
+   <Line endX="485.0" layoutX="691.0" layoutY="297.0" startX="164.0" strokeMiterLimit="6.0" strokeWidth="0.5" />
+   <Hyperlink fx:id="viewquiz" layoutX="1083.0" layoutY="270.0" prefHeight="26.0" prefWidth="94.0" text="view more &gt;">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </Hyperlink>
+   <stylesheets>
+      <URL value="@../CSS/sideBar.css" />
+      <URL value="@../CSS/dash.css" />
+   </stylesheets>
+</AnchorPane>

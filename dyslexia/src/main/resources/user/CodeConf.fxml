@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.CodeConfirmationController"
+      spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label fx:id="instructionLabel" text="Enter the 6‑digit code sent to your email:"/>
+    <TextField fx:id="codeField" promptText="e.g. 123456"/>
+    <Button fx:id="confirmButton" text="Validate" onAction="#handleConfirm"/>
+    <Label fx:id="messageLabel" textFill="red"/>
+</VBox>

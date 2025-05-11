@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" stylesheets="@../CSS/settings.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SettingsController">
+      <fx:include fx:id="sidebar" source="../sideBar.fxml" />
+    <AnchorPane layoutX="70.0" layoutY="64.0" prefHeight="616.0" prefWidth="1129.0" stylesheets="@../CSS/settings.css">
+        <ListView layoutX="332.0" layoutY="95.0" prefHeight="430.0" prefWidth="660.0" styleClass="card" />
+        <VBox layoutX="380.0" layoutY="176.0" prefHeight="264.0" prefWidth="447.0">
+            <children>
+                <!-- Common Fields -->
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="47.0" prefWidth="412.0">
+                    <children>
+                        <Text fill="#01296e9b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="First Name" wrappingWidth="83.0">
+                            <font>
+                                <Font size="13.0" />
+                            </font></Text>
+                        <Text fx:id="txtName" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="366.0" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="50.0" prefWidth="412.0" styleClass="label">
+                    <children>
+                        <Text fill="#01296e98" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="Last Name" wrappingWidth="81.0">
+                            <font>
+                                <Font size="13.0" />
+                            </font></Text>
+                        <Text fx:id="txtLast" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="329.0" />
+                    </children>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="176.0" prefHeight="56.0" prefWidth="412.0">
+                    <children>
+                        <Text fill="#01297099" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="Email" wrappingWidth="61.0">
+                            <font>
+                                <Font size="13.0" />
+                            </font></Text>
+                        <Text fx:id="txtEmail" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="321.0" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="57.0" prefWidth="412.0">
+                    <children>
+                        <Text fill="#01297099" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="Phone number" wrappingWidth="88.0">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="txtPhone" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="321.0" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="55.0" prefWidth="412.0">
+                    <children>
+                        <Text fill="#01297099" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="birthday" wrappingWidth="61.0">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Text>
+                        <Text fx:id="txtbd" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="321.0" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Label layoutX="378.0" layoutY="122.0" text="Profil Details">
+            <font>
+                <Font name="Comic Sans MS" size="24.0" />
+            </font>
+        </Label>
+
+                          <!-- Role-specific Fields (Hidden initially) -->
+        <VBox fx:id="teacherFields" layoutX="380.0" layoutY="430.0" prefHeight="63.0" prefWidth="409.0" visible="false">
+            <children>
+                <HBox layoutX="10.0" layoutY="10.0" prefHeight="57.0" prefWidth="409.0">
+                    <children>
+                        <Text fill="#01296e9b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="availability " wrappingWidth="83.0" />
+                        <Text fx:id="availability" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.0" />
+                    </children>
+                </HBox>
+            <HBox>
+               <children>
+                  <Text fill="#01296e9b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="Subject Area" wrappingWidth="83.0" />
+                  <Text fx:id="subject" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.0" />
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+      <VBox fx:id="studentFields" layoutX="380.0" layoutY="430.0" prefHeight="79.0" prefWidth="409.0" visible="false">
+         <children>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="57.0" prefWidth="409.0">
+               <children>
+                  <Text fill="#01296e9b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="dys type" wrappingWidth="83.0" />
+                  <Text fx:id="type" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="42.0" prefWidth="409.0" visible="false">
+               <children>
+                  <Text fill="#01296e9b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="specific needs" wrappingWidth="83.0" />
+                  <Text fx:id="needs" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.0" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Text fill="#01296e9b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="label-overview" text="level " wrappingWidth="83.0" />
+                  <Text fx:id="level" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+
+        <!-- Psychologist-specific fields -->
+        <VBox fx:id="psyFields" layoutX="380.0" layoutY="430.0" prefHeight="120.0" prefWidth="409.0" visible="false">
+            <children>
+                <HBox prefHeight="40.0" prefWidth="409.0">
+                    <children>
+                        <Text fill="#01296e9b" styleClass="label-overview" text="Schedule:" />
+                        <Text fx:id="txtSchedule" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="40.0" prefWidth="409.0">
+                    <children>
+                        <Text fill="#01296e9b" styleClass="label-overview" text="Biography:" />
+                        <Text fx:id="txtBio" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <VBox alignment="CENTER" layoutX="168.0" layoutY="101.0" prefHeight="198.0" prefWidth="154.0" spacing="10">
+         <children>
+            <ImageView fx:id="overviewImageView" fitHeight="120" fitWidth="120" pickOnBounds="true" preserveRatio="true">
+               <clip>
+                  <Circle centerX="60" centerY="60" radius="60" />
+               </clip>
+            </ImageView>
+         </children>
+      </VBox>
+      <HBox layoutX="353.0" layoutY="78.0" prefHeight="35.0" prefWidth="450.0" spacing="10.0">
+         <children>
+            <Button onAction="#goToOverview" prefHeight="35.0" prefWidth="150.0" styleClass="btn-settings" text="Overview" textFill="#012970" />
+            <Button layoutX="10.0" layoutY="10.0" onAction="#goToEditProfile" prefHeight="35.0" prefWidth="150.0" styleClass="btn-settings" text="Edit Profile" textFill="#4154f1" />
+            <Button layoutX="109.0" layoutY="10.0" onAction="#goToChangePassword" prefHeight="35.0" prefWidth="150.0" styleClass="btn-settings" text="Change Password" textFill="#012970" />
+         </children>
+      </HBox>
+        <Button layoutX="109.0" layoutY="10.0" onAction="#deleteAccount" prefHeight="35.0" prefWidth="150.0" styleClass="btn-settings" text="Delete Account" textFill="#ff4c4c" />
+
+    </AnchorPane>
+
+</AnchorPane>

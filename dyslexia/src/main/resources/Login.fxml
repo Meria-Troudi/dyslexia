@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="formContain" minHeight="600.0" minWidth="900.0" prefHeight="600.0" prefWidth="900" stylesheets="@CSS/signupin.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+      <!-- Left Side -->
+        <VBox fx:id="leftPane" alignment="CENTER" minHeight="600.0" minWidth="450.0" prefHeight="600.0" prefWidth="450.0" styleClass="leftPane">
+            <AnchorPane minHeight="600.0" prefHeight="600.0" prefWidth="450.0">
+                <ImageView fx:id="logoImage" fitHeight="471.0" fitWidth="420.0" layoutY="87.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="87.0">
+                    <image>
+                        <Image url="@images/img4.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="toSignUpButton" layoutX="117.0" layoutY="479.0" prefHeight="43.0" prefWidth="188.0" styleClass="flat-button" text="Create Account" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="117.0">
+                </Button>
+                <ImageView fitHeight="87.0" fitWidth="94.0" layoutX="306.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="306.0" AnchorPane.topAnchor="133.0">
+                    <image>
+                        <Image url="@images/home-Saly-21.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="welcomeLabel" layoutX="122.0" layoutY="55.0" prefHeight="32.0" prefWidth="177.0" text="Welcome  Back!" textFill="#b51818" AnchorPane.leftAnchor="122.0" AnchorPane.topAnchor="55.0">
+                </Label>
+                <Label fx:id="descriptionLabel" layoutX="144.0" layoutY="96.0" style="-fx-font-size: 14px; -fx-text-fill: white;" text="Sign in with your personal info" wrapText="true" AnchorPane.leftAnchor="144.0" AnchorPane.topAnchor="96.0" />
+            </AnchorPane>
+            </VBox>
+        <!-- Right Side (Forms) -->
+    <StackPane fx:id="rightFormPane" minHeight="600.0" minWidth="450.0" prefHeight="600.0" prefWidth="450.0">
+            <!-- Sign In Form -->
+            <VBox fx:id="signInPane" alignment="CENTER" minHeight="556.0" minWidth="450.0" prefHeight="572.0" prefWidth="450.0" style="-fx-padding: 40;" styleClass="VBox-Signin" StackPane.alignment="TOP_LEFT">
+            <AnchorPane prefHeight="135.0" prefWidth="370.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                      <Label layoutX="146.0" layoutY="45.0" style="-fx-font-size: 22px;" styleClass="form-title" text="Sign In">
+                     <padding>
+                        <Insets right="7.0" top="7.0" />
+                     </padding>
+                  </Label>
+                  <ImageView fitHeight="87.0" fitWidth="192.0" layoutX="12.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+                <TextField fx:id="signInEmail" prefHeight="45.0" prefWidth="370.0" promptText="Email">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            <padding>
+               <Insets top="3.0" />
+            </padding>
+                </TextField>
+                <Text fx:id="errormail" fill="#dc3545" strokeType="OUTSIDE" style="-fx-font-size: 12px;" wrappingWidth="353.0" />
+                <PasswordField fx:id="signInPassword" prefHeight="45.0" prefWidth="370.0" promptText="Password">
+                    <VBox.margin>
+                  <Insets bottom="-7.0" />
+               </VBox.margin></PasswordField>
+                <Text fx:id="errorpwd" fill="#dc3545" strokeType="OUTSIDE" style="-fx-font-size: 12px;" />
+
+                <HBox spacing="166.0">
+
+
+               <children>
+                      <CheckBox fx:id="rememberMeCheckbox" text="Remember me">
+                  <HBox.margin>
+                     <Insets />
+                  </HBox.margin></CheckBox>
+                  <Hyperlink onAction="#goToForgotPass" text="Forget password?" />
+               </children>
+
+            <VBox.margin>
+               <Insets bottom="13.0" />
+            </VBox.margin>
+            </HBox>
+                <Button fx:id="signInButton" onAction="#handleLogin" prefHeight="47.0" prefWidth="154.0" text="Sign In">
+               <padding>
+                  <Insets top="8.0" />
+               </padding>
+            <VBox.margin>
+               <Insets top="11.0" />
+            </VBox.margin>
+            </Button>
+                <Label fx:id="invalidLogin" textFill="#dc3545" style="-fx-font-size: 12px;"/>
+            <VBox.margin>
+               <Insets bottom="11.0" />
+            </VBox.margin>
+            </VBox>
+
+            <!-- Sign Up Form Step 1 -->
+            <VBox fx:id="signUpStep1Pane" alignment="CENTER" minHeight="600.0" minWidth="450.0" prefHeight="600.0" prefWidth="450.0" style="-fx-padding: 40;" styleClass="VBox-Signin" visible="false">
+                <Label style="-fx-font-size: 22px;" styleClass="form-title" text="Sign Up">
+            <VBox.margin>
+               <Insets top="13.0" />
+            </VBox.margin></Label>
+         <HBox minHeight="196.0" minWidth="428.0" prefHeight="203.0" prefWidth="428.0">
+            <children>
+               <VBox minHeight="200.0" prefHeight="200.0" prefWidth="214.0" styleClass="VBox-signup">
+                  <children>
+                            <Label text="First Name" />
+                            <TextField fx:id="tfFirstName" prefHeight="0.0" prefWidth="174.0" promptText="First Name" />
+                            <Label text="Birth Date" />
+                            <DatePicker fx:id="tfbirth" promptText="Birth Date" />
+                            <Label text="Gender" />
+                     <HBox spacing="9.0">
+                        <children>
+                                   <RadioButton fx:id="maleRadio" text="Male" />
+                                   <RadioButton fx:id="femaleRadio" text="Female" />
+                        </children>
+                     </HBox>
+                  </children>
+               </VBox>
+               <VBox prefHeight="196.0" prefWidth="218.0" styleClass="VBox-signup">
+                  <children>
+                      <Label text="Last Name" />
+                     <TextField fx:id="tfLastName" minHeight="34.0" prefHeight="30.0" prefWidth="174.0" promptText="First Name" />
+                     <Label text="Phone  number" />
+                     <TextField fx:id="tfPone" minHeight="34.0" prefHeight="30.0" prefWidth="174.0" promptText="Phone number" />
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+
+                <Text fx:id="fterror" fill="#dc3545" strokeType="OUTSIDE" style="-fx-font-size: 12px;" wrappingWidth="411.0" />
+                <Label contentDisplay="TOP" prefHeight="15.0" prefWidth="410.0" text="Email">
+                <VBox.margin>
+                   <Insets />
+                </VBox.margin>
+                </Label>
+                <TextField fx:id="ftmail" promptText="Email" />
+                <Text fx:id="merror" fill="#dc3545" strokeType="OUTSIDE" style="-fx-font-size: 12px;" wrappingWidth="362.0" />
+         <HBox spacing="23.0">
+            <children>
+               <VBox>
+                  <children>
+                            <Label prefHeight="15.0" prefWidth="219.0" text="Password" />
+                            <PasswordField fx:id="ftCPwd" prefHeight="35.0" prefWidth="169.0" promptText="Confirm Password" />
+                      <Text fx:id="perror" fill="#dc3545" strokeType="OUTSIDE" style="-fx-font-size: 12px;" />
+                  </children>
+               </VBox>
+               <VBox>
+                  <children>
+                            <Label prefHeight="15.0" prefWidth="160.0" text="Confirm Password" />
+                            <PasswordField fx:id="ftPwd" prefHeight="35.0" prefWidth="233.0" promptText="Password" />
+                      <Text fx:id="cperror" fill="#dc3545" strokeType="OUTSIDE" style="-fx-font-size: 12px;" />
+                  </children>
+               </VBox>
+            </children>
+         </HBox>
+         <HBox>
+            <children>
+                      <Label prefHeight="25.0" prefWidth="89.0" text="Role" />
+                      <ComboBox fx:id="roleComboBox" prefHeight="35.0" prefWidth="175.0" promptText="Select Role">
+                          <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                  <String fx:value="Student" />
+                                  <String fx:value="Teacher" />
+                                  <String fx:value="Admin" />
+                                  <String fx:value="psy" />
+                              </FXCollections>
+                          </items>
+                      </ComboBox>
+            </children>
+         </HBox>
+         <Button fx:id="toStep2Button" onAction="#goToNextStep" styleClass="back-button" text="Next →" />
+            <VBox.margin>
+               <Insets top="15.0" />
+            </VBox.margin>
+            </VBox>
+            <!-- Sign Up Form Step 2 - Teacher Fields -->
+            <VBox fx:id="teacherStepPane" alignment="CENTER" spacing="13.0" style="-fx-padding: 40;" visible="false">
+                <Button fx:id="backToStep1FromTeacher" styleClass="back-button" text="← Back">
+            <VBox.margin>
+               <Insets bottom="9.0" />
+            </VBox.margin></Button>
+                <Label styleClass="form-title" text="Teacher Information" />
+                <Label prefHeight="15.0" prefWidth="498.0" text="Subject Area" />
+                <TextField fx:id="subjectAreaField" promptText="Subject Area" />
+                <Label prefHeight="15.0" prefWidth="451.0" text="Availability" />
+                <TextField fx:id="availabilityField" promptText="Availability" />
+                <Button fx:id="finalSignUpButtonTeacher" onAction="#handleSignUp" text="Sign Up">
+            <VBox.margin>
+               <Insets top="11.0" />
+            </VBox.margin></Button>
+            </VBox>
+            <!-- Sign Up Form Step 2 - Student Fields -->
+            <VBox fx:id="studentStepPane" alignment="CENTER" minHeight="600.0" minWidth="450.0" prefHeight="600.0" prefWidth="450.0" spacing="11.0" style="-fx-padding: 40;" styleClass="VBox-Signin" visible="false">
+                <Button fx:id="backToStep1FromStudent" styleClass="back-button" text="← Back" />
+                <Label styleClass="form-title" text="Student Information" />
+                <Label prefHeight="15.0" prefWidth="385.0" text="Dyslexia Type" />
+                <ComboBox fx:id="dyslexiaTypeComboBox" prefHeight="29.0" prefWidth="175.0" promptText="Dyslexia Type">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="VISUAL" />
+                            <String fx:value="AUDITORY" />
+                            <String fx:value="ATTENTIONAL" />
+                            <String fx:value="SURFACE" />
+                            <String fx:value="DEEP" />
+                            <String fx:value="MIXED" />
+                        </FXCollections>
+                    </items>
+            <VBox.margin>
+               <Insets right="215.0" />
+            </VBox.margin>
+                </ComboBox>
+                <Label prefHeight="15.0" prefWidth="387.0" text="Severity Level" />
+                <ComboBox fx:id="severityLevelComboBox" prefHeight="28.0" prefWidth="153.0" promptText="Severity Level">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="MILD" />
+                            <String fx:value="MODERATE" />
+                            <String fx:value="SEVERE" />
+                        </FXCollections>
+                    </items>
+            <VBox.margin>
+               <Insets right="215.0" />
+            </VBox.margin>
+                </ComboBox>
+                <Label prefHeight="15.0" prefWidth="386.0" text="Specific Needs" />
+                <TextField fx:id="specificNeedsField" prefHeight="35.0" prefWidth="188.0" promptText="Specific Needs" />
+                <Button fx:id="finalSignUpButtonStudent" onAction="#handleSignUp" text="Sign Up">
+            <VBox.margin>
+               <Insets top="12.0" />
+            </VBox.margin></Button>
+            </VBox>
+
+        <VBox fx:id="PsyStepPane" alignment="CENTER" spacing="10" styleClass="VBox-signup" visible="false">
+             <Button fx:id="backToStep1Frompsy" styleClass="back-button" text="← Back" />
+            <Label styleClass="form-title" text="Psychologist Information" />
+            <Label prefHeight="15.0" prefWidth="415.0" text="schedule" />
+            <TextField fx:id="tfschedule" promptText="schedule" />
+            <Label prefHeight="15.0" prefWidth="408.0" text="Bio" />
+            <TextField fx:id="tfBio" prefHeight="35.0" prefWidth="392.0" promptText="Short Bio" />
+            <Text fx:id="psyErrorText" fill="#dc3545" strokeType="OUTSIDE" style="-fx-font-size: 12px;" wrappingWidth="417.0" />
+            <HBox alignment="CENTER" spacing="20">
+                <Button alignment="CENTER" onAction="#handleSignUp" prefHeight="42.0" prefWidth="158.0" text="Signup" />
+            </HBox>
+        </VBox>
+    </StackPane>
+    </HBox>
