@@ -39,6 +39,6 @@ public class OTPHandler {
 
     /** Validate that the provided code matches and hasn’t expired. */
     public boolean validateOtp(String email, String code) {
-        return otpService.validateOTP(email, code);
+        return OTPService.validateOTP(email, code);
     }
 }
