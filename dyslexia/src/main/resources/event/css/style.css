@@ -1,0 +1,334 @@
+/* ==== GLOBAL ==== */
+* {
+    -fx-font-family: 'Segoe UI', 'Open Sans', sans-serif;
+    -fx-font-weight: bold;
+}
+
+#root {
+    -fx-background-image: url('/event/images/fond1.jpg');
+    -fx-background-size: cover;
+}
+
+/* ==== LABELS ==== */
+.label, .title-label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 16px;
+}
+
+.section-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8e1b1b; /* Bordeaux chaleureux */
+}
+
+/* ==== TABLE VIEW ==== */
+.table-view {
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+    -fx-border-color: #6c3483; /* Violet-bordeaux */
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 6, 0.0, 0, 3);
+    -fx-padding: 15px; /* Increased padding */
+}
+
+.table-view .column-header {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 8px;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #e8f4fc;
+    -fx-cursor: hand;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+/* ==== TEXT INPUT ==== */
+.text-field, .text-area, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #2980b9;
+    -fx-border-radius: 12px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #6c3483;
+    -fx-border-width: 2px;
+}
+
+.text-area {
+    -fx-background-color: white;
+    -fx-border-color: #2980b9;
+    -fx-border-radius: 12px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+    -fx-border-width: 1px;
+}
+
+/* ==== BUTTONS ==== */
+.button, .btn-primary {
+    -fx-background-color: linear-gradient(to right, #2980b9, #6dd5fa);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-background-radius: 25px;
+    -fx-padding: 8px 18px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0.0, 0, 2);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #1565c0, #5fa8f5);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.button:pressed {
+    -fx-background-color: #0d47a1;
+}
+
+/* Boutons secondaires */
+.btn-secondary {
+    -fx-background-color: #8e1b1b;
+    -fx-text-fill: white;
+    -fx-background-radius: 25px;
+    -fx-padding: 8px 16px;
+}
+
+/* Boutons ronds */
+.btn-round {
+    -fx-background-color: #ffffffdd;
+    -fx-border-color: #6c3483;
+    -fx-border-width: 2;
+    -fx-background-radius: 50%;
+    -fx-text-fill: #6c3483;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+    -fx-cursor: hand;
+}
+
+/* ==== SIDEBAR ==== */
+.side-bar-container {
+    -fx-background-color: linear-gradient(to bottom, #0B1747, #6c91c2);
+    -fx-padding: 20 10;
+    -fx-background-radius: 0 20 20 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 3);
+}
+
+.side-bar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.side-bar-button:hover {
+    -fx-background-color: #223c6b;
+}
+
+.side-bar-button:pressed {
+    -fx-background-color: #6c3483;
+}
+
+.side-bar-button.active {
+    -fx-background-color: #0B1747;
+    -fx-border-width: 1px;
+    -fx-border-color: #fff;
+}
+
+/* ==== SEARCH BAR ==== */
+#txt_search {
+    -fx-padding: 6 12;
+    -fx-background-color: #e3e9f7;
+    -fx-background-radius: 15px;
+    -fx-font-size: 14px;
+    -fx-border-color: transparent;
+}
+
+#txt_search:focused {
+    -fx-border-color: #5a9cff;
+    -fx-effect: dropshadow(three-pass-box, rgba(90,156,255,0.3), 8, 0, 0, 2);
+}
+
+/* ==== SCROLLPANE ==== */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+#mainScroll .viewport {
+    -fx-background-image: url("/event/images/fond1.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+/* ==== DETAILS ==== */
+.details-pane {
+    -fx-background-color: linear-gradient(to bottom right, #fefefe, #f3f7fa);
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-border-color: #ccc;
+}
+
+/* Transitions for hover effects */
+.button, .btn-primary {
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* Focus effect for interactive elements */
+.button:focused, .btn-primary:focused {
+    -fx-border-color: #6c3483;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 3);
+}
+
+.title-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2a2a2a;
+}
+
+.btn-primary {
+    -fx-background-color: #004080;
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+    -fx-font-size: 14px;
+}
+
+.btn-secondary {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333333;
+    -fx-background-radius: 10;
+    -fx-font-size: 13px;
+}
+
+.btn-round {
+    -fx-background-color: #800000;
+    -fx-text-fill: white;
+    -fx-background-radius: 50;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+    -fx-font-size: 18px;
+}
+.weather-message {
+    -fx-font-size: 16px;
+    -fx-text-fill: #001F3F; /* Bleu très foncé */
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 10 0;
+    -fx-alignment: center;
+}
+
+
+#titre {
+    -fx-font-size: 42px;
+    -fx-fill: #0a1f44; /* Bleu foncé élégant */
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #000000, 6, 0.3, 2, 2);
+    -fx-font-family: "Verdana";
+    -fx-letter-spacing: 1px;
+}
+
+
+
+
+#titre1 {
+    -fx-font-size: 25px; /* Taille du texte */
+    -fx-fill: white; /* Couleur du texte */
+    -fx-font-weight: bold; /* Texte en gras */
+    -fx-effect: dropshadow(gaussian, #000000, 6, 0.3, 2, 2); /* Ombre portée pour le contraste */
+    -fx-font-family: "Verdana"; /* Police stylée */
+    -fx-letter-spacing: 1px; /* Espacement des lettres */
+}
+
+/* Main container */
+.main-pane {
+    -fx-background-color: #F5F5F5;
+}
+
+/* Title */
+.title {
+    -fx-font-size: 30px;  /* Increase font size */
+    -fx-font-weight: bold; /* Optional, to make it bold */
+    -fx-text-fill: #0B1747; /* Optional, to change the text color */
+    -fx-alignment: center;  /* Optional, if you want it centered */
+}
+
+/* Form Panel */
+.form-container {
+    -fx-background-color: white;
+    -fx-border-radius: 10px;
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+/* Form Input Rows */
+.input-row {
+    -fx-alignment: center-left;
+    -fx-spacing: 10px;
+}
+
+/* Labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0B1747;
+}
+
+/* Text Fields */
+.text-field {
+    -fx-padding: 8px;
+    -fx-background-color: #E8F0FE;
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-border-color: #87bae4;
+    -fx-border-width: 2px;
+    -fx-focus-color: #5a9cff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 2);
+}
+
+.text-field:focused {
+    -fx-border-color: #5a9cff;
+}
+
+/* Text Area */
+.text-area {
+    -fx-padding: 8px;
+    -fx-background-color: #E8F0FE;
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-border-color: #87bae4;
+    -fx-border-width: 2px;
+    -fx-focus-color: #5a9cff;}
+/* Rouge et arrondi - Red and rounded button with ID */
+/* Correct usage of color code */
+.button {
+    -fx-background-color: #1E90FF;  /* Ensure this is correct */
+}
+
+.btn-transparent {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+    -fx-effect: none;
+}
+.weather-message {
+    -fx-font-size: 16px;
+    -fx-text-fill: #003366; /* Bleu foncé */
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 10 0;
+    -fx-alignment: center;
+}

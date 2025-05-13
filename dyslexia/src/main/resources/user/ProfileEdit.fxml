@@ -15,8 +15,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.collections.ObservableList?>
 
-<AnchorPane prefHeight="682.0" prefWidth="1132.0" stylesheets="@../CSS/sideBar.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProfileEditController">
+<AnchorPane prefHeight="682.0" prefWidth="1132.0" stylesheets="@../CSS/sideBar.css" xmlns="http://javafx.com/javafx/17.0.14"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.controllers.ProfileEditController">
    <fx:include source="../sideBar.fxml" />
    <AnchorPane layoutX="89.0" layoutY="65.0" prefHeight="617.0" prefWidth="1111.0" stylesheets="@../CSS/settings.css">
       <ListView layoutX="332.0" layoutY="95.0" prefHeight="430.0" prefWidth="660.0" styleClass="card profile-card" AnchorPane.rightAnchor="124.0" />

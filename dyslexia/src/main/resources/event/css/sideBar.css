@@ -1,0 +1,88 @@
+/* Main container */
+.root {
+    -fx-background-color: #F5F5F5;
+}
+.side-bar-container {
+    -fx-background-color: linear-gradient(to top, #0B1747 46%, #87bae4 97%);
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-padding: 20 5;
+    -fx-background-radius: 0 20 20 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(86, 139, 185, 0.753), 10, 0, 0, 2);
+}
+
+
+/* Sidebar buttons */
+.side-bar-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-background-radius: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.3, 0, 0);
+    -fx-text-fill: white;
+    -fx-transition: all 0.3s ease;
+}
+
+.side-bar-button:hover {
+    -fx-background-color: #0B1747;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0.5, 0, 2);
+}
+
+.side-bar-button:pressed {
+    -fx-background-color: #c7d2fe;
+}
+.side-bar-button:focused {
+    -fx-border-color: #ffffff;
+}
+
+/* Active state */
+.side-bar-button.active {
+    -fx-background-color: #0B1747;
+    -fx-border-width: 1px;
+}
+/* Button to toggle sidebar */
+.toggle-sidebar-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 8px;
+    -fx-background-radius: 10px;
+    -fx-transition: all 0.3s ease;
+}
+
+.toggle-sidebar-button:hover {
+    -fx-background-color: #0B1747;
+}
+
+/* Rotating the arrow when sidebar is collapsed */
+.rotate-180 {
+    -fx-rotate: 180deg;
+}
+
+/* Text and icon layout */
+.side-bar-button .graphic {
+    -fx-alignment: center;
+}
+.side-bar-button:hover .graphic ImageView {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-opacity: 0.85;
+}
+#txt_search {
+    -fx-padding: 5 10;
+    -fx-background-color: #3352ff15;;
+    -fx-background-radius: 20px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 212, 212, 0.05), 5, 0, 0, 0);
+}
+
+#txt_search:focused {
+    -fx-border-color: #5a9cff;
+    -fx-effect: dropshadow(three-pass-box, rgba(90, 156, 255, 0.3), 8, 0, 0, 2);
+}
+
+
+#topBar{
+    -fx-background-color:white;
+}
+
+

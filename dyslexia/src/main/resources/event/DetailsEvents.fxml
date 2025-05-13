@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="491.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="event.Controllers.DetailsEventsController">
+    <fx:include source="sideBar.fxml" />
+    <AnchorPane accessibleRole="IMAGE_VIEW" layoutX="75.0" layoutY="56.0" prefHeight="590.0" prefWidth="834.0">
+
+    <children>
+        <!-- Titre -->
+        <Label fx:id="titre1" layoutX="270.0" layoutY="32.0" prefHeight="83.0" prefWidth="342.0" stylesheets="@css/style.css" text="Events details " textOverrun="WORD_ELLIPSIS">
+            <font>
+               <Font size="22.0" />
+            </font></Label>
+
+        <!-- Détails -->
+        <VBox layoutX="14.0" layoutY="189.0" prefHeight="190.0" prefWidth="178.0" spacing="10" styleClass="card" stylesheets="@css/style.css">
+            <children>
+                <Label fx:id="titleLabel" styleClass="detail-label" text="Title : " />
+                <Label fx:id="descriptionLabel" styleClass="detail-label" text="Description :" />
+                <Label fx:id="dateLabel" styleClass="detail-label" text="Date :" />
+                <Label fx:id="timeLabel" styleClass="detail-label" text="time :  " />
+                <Label fx:id="locationLabel" styleClass="detail-label" text="location :" />
+                <Label fx:id="typeLabel" styleClass="detail-label" text="Type :" />
+            </children>
+        </VBox>
+        <Button fx:id="btnSupprimer" layoutX="692.0" layoutY="171.0" onAction="#supprimerEvenement" prefHeight="35.0" prefWidth="132.0" stylesheets="@css/style.css" text="DELETE" />
+      <TableView fx:id="participationTableView" layoutX="141.0" layoutY="399.0" prefHeight="200.0" prefWidth="551.0" stylesheets="@css/style.css">
+        <columns>
+          <TableColumn fx:id="nom" prefWidth="92.0" text="First Name" />
+          <TableColumn fx:id="prenom" prefWidth="83.19992065429688" text="lastname" />
+            <TableColumn fx:id="email" prefWidth="78.4000244140625" text="email " />
+            <TableColumn fx:id="telephone" prefWidth="79.199951171875" text="phone" />
+            <TableColumn fx:id="commentaire" prefWidth="123.199951171875" text="commentaire" />
+            <TableColumn fx:id="date_participation" prefWidth="68.0" text="date" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnModifier" layoutX="544.0" layoutY="171.0" onAction="#modifierEvenement" prefHeight="35.0" prefWidth="132.0" stylesheets="@css/style.css" text="UPDATE" />
+         <Label fx:id="titre" layoutX="217.0" layoutY="347.0" prefHeight="52.0" prefWidth="448.0" styleClass="section-title" stylesheets="@css/style.css" text="list of participations" textOverrun="WORD_ELLIPSIS">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Label>
+         <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/logover2.png" />
+            </image>
+         </ImageView>
+
+    </children>
+      <effect>
+         <GaussianBlur radius="0.0" />
+      </effect>
+</AnchorPane>
+
+
+<stylesheets>
+        <URL value="@css/sideBar.css" />
+    </stylesheets>
+
+</AnchorPane>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements et Animations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 80%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #444;
+            animation: slideIn 1s ease-out;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #777;
+            opacity: 0;
+            animation: fadeIn 2s 1s forwards;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .search-container input {
+            width: 60%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .search-container button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        footer .social-btn {
+            padding: 10px 20px;
+            background-color: #3b5998; /* Facebook */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        footer .social-btn:hover {
+            background-color: #2d4373;
+        }
+
+        #instagramBtn {
+            background-color: #E1306C; /* Instagram */
+        }
+
+        #instagramBtn:hover {
+            background-color: #9c145c;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Bienvenue aux Événements 🎉</h1>
+        <p>Rejoignez-nous pour des expériences mémorables !</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Rechercher un événement..." />
+        <button id="searchButton">🔍</button>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Lieu</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Retrouvez nos événements sur les réseaux sociaux :</p>
+        <button class="social-btn" id="facebookBtn">Facebook</button>
+        <button class="social-btn" id="instagramBtn">Instagram</button>
+    </footer>
+</div>
+
+<script>
+    // Rechercher un événement dans le tableau
+    document.getElementById("searchButton").addEventListener("click", function() {
+        const searchQuery = document.getElementById("search").value.toLowerCase();
+        const rows = document.querySelectorAll("table tbody tr");
+
+        rows.forEach(row => {
+            const title = row.querySelector("td:nth-child(1)").textContent.toLowerCase();
+            if (title.includes(searchQuery)) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    });
+
+    // Simuler des données dynamiques pour les événements
+    const eventsData = [
+        { title: "Concert de musique", description: "Un concert incroyable!", location: "Paris", date: "2025-06-10" },
+        { title: "Festival de cinéma", description: "Célébration du cinéma", location: "Lyon", date: "2025-06-15" },
+        { title: "Atelier de peinture", description: "Laissez libre cours à votre créativité", location: "Marseille", date: "2025-06-20" }
+    ];
+
+    const tbody = document.querySelector("table tbody");
+
+    eventsData.forEach(event => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${event.title}</td>
+            <td>${event.description}</td>
+            <td>${event.location}</td>
+            <td>${event.date}</td>
+        `;
+        tbody.appendChild(row);
+    });
+</script>
+
+</body>
+</html>

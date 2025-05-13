@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="root" prefHeight="660.0" prefWidth="740.0" stylesheets="@../CSS/styles2.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DetailsController">
+<AnchorPane fx:id="root" prefHeight="660.0" prefWidth="740.0" stylesheets="@../CSS/styles2.css" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.controllers.DetailsController">
 
     <!-- Main Content Container -->
     <VBox layoutX="154.0" layoutY="77.0" minHeight="491.0" minWidth="496.0" prefHeight="598.0" prefWidth="546.0" spacing="13.0" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="52.0">

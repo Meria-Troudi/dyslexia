@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="680.0" prefWidth="1200.0" stylesheets="@../CSS/dash.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StDashController">
+<AnchorPane prefHeight="680.0" prefWidth="1200.0" stylesheets="@../CSS/dash.css" xmlns="http://javafx.com/javafx/17.0.14" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.controllers.StDashController">
    <fx:include fx:id="sidebar" source="../sideBar.fxml" />
    <AnchorPane>
       <!-- content-->

@@ -1,0 +1,12 @@
+.vbox-style {
+    -fx-background-color: transparent; /* Arrière-plan transparent */
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-border-color: black;
+    -fx-border-width: 3;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+
+
